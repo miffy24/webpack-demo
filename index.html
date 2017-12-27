@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
     <title>陈朱陶的个人简历</title>
-    <link rel="stylesheet" href="a.css">
+    <link rel="stylesheet" href="./a.css">
+    <script src="//at.alicdn.com/t/font_523352_t5o9kdnrifbqehfr.js">
+    <style type="text/css">
+        .icon {
+        width: 1em; height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+        }
+    </style>
+    </script>
 </head>
 <body>
     <!-- 导航栏 -->
-    <div class="topNavBar clearfix">   
+    <div class="topNavBar"
+    <div class="topNavBar-inner clearfix">   
         <a class="logo" href="#" alt="logo" style="float: left; ">
         <span class="rs">RS</span><span class="card">card</span>
         <nav style="float:right;">
@@ -24,14 +35,19 @@
             </ul>
         </nav>
     </div>
-    <div class="banner" style="background-image:url(#)"></div>
+    <div class="banner">
+        <div class="mask"></div>
+    </div>
     <main>
         <div class="userCard">
-            <div class="picture">
-                <img src="#" alt="头像">
-            </div>
+            <div class="pictureAndText clearfix">
+                <div class="picture">
+                    <img src="./img/avatar.jpg" width="299" height="347" alt="头像">
+                </div>
             <div class="text">
-                <span class="hello">Hello</span>
+                <span class="welcome">Hello
+                    <span class="triangle"></span>
+                </span>
                     <h1>陈朱陶</h1>
                     <p>前端工程师</p>
                     <hr>
@@ -45,15 +61,24 @@
                         <dt>手机</dt>
                         <dd>18013152639</dd>
                     </dl>
+                </div>                
             </div>
             <footer class="media">
-                        <a href="#"><img src="#" alt=".."></a>
-                        <a href="#"><img src="#" alt=".."></a>
-                        <a href="#"><img src="#" alt=".."></a>
-                        <a href="#"><img src="#" alt=".."></a>
-                        <a href="#"><img src="#" alt=".."></a>
-                        <a href="#"><img src="#" alt=""></a>
-                        <a href="#"><img src="#" alt=".."></a>
+                        <a href="#">   
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-github"></use>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-weibo"></use>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-yingdaicon04"></use>
+                            </svg>
+                        </a>
             </footer>
         </div>
         <a href="#" class="button">下载简历</a>
