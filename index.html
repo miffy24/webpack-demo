@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
-    <!-- <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
-    <title>陈朱陶的个人简历</title>
-    <link rel="stylesheet" href="./a.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的个人简历</title>
+    <link rel="stylesheet" href="./main.css">
     <script src="//at.alicdn.com/t/font_523352_t5o9kdnrifbqehfr.js">
-    <style type="text/css">
-        .icon {
-        width: 1em; height: 1em;
-        vertical-align: -0.15em;
-        fill: currentColor;
-        overflow: hidden;
-        }
-    </style>
     </script>
+    <style type="text/css">
+        .icon {width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden; }
+        .loading{width:200px; height:200px; position:relative; }
+        .loading::before, .loading::after{content:''; background:black; width:50px; height:50px; border-radius:50%; left:0; bottom:0; right:0; top:0; margin:auto; position:absolute; animation:s 1.5s linear infinite; }
+        .loading::after{animation-delay:0.75s;}
+        @keyframes s{0%{width:0; height:0; opacity:1; } 100%{width:100px; height:100px; opacity:0; } }
+        .site-welcome{
+            display: none;position: fixed;top:0;left:0;justify-content: center;align-items: center;width: 100%;height: 100%;background: #888;z-index: 1;
+        }
+        .site-welcome.active{display: flex;}
+</style>
 </head>
 <body>
+    <!-- loading动画 -->
+    <div id="siteWelcome" class="site-welcome active">
+        <div class="loading"></div>
+    </div>
     <!-- 导航栏 -->
     <div class="topNavBar">
-    <div class="topNavBar-inner clearfix">   
+    <div class="topNavBar-inner clearfix">
         <a class="logo" href="#" alt="logo" style="float: left; ">
         <span class="rs">RS</span><span class="card">card</span>
         <nav style="float:right;">
@@ -62,10 +69,10 @@
                         <dt>手机</dt>
                         <dd>18013152639</dd>
                     </dl>
-                </div>                
+                </div>
             </div>
             <footer class="media">
-                        <a href="#">   
+                        <a href="#">
                             <svg class="icon" aria-hidden="true">
                                 <use xlink:href="#icon-github"></use>
                             </svg>
@@ -160,8 +167,12 @@
             </div>
           </div>
     </section>
- 
-   
-    
+<script>
+    setTimeout(function(){
+        siteWelcome.classList.remove('active')
+    },3000)
+</script>
+
+
 </body>
 </html>
