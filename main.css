@@ -1,293 +1,69 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-h1,h2,h3,h4,h5,h6{
-    font-weight: normal;
-}
-ul,ol{
-    list-style: none;
-    
-}
-body{
-    background-color:#efefef;
-    margin: 0;
-}
-a{
-    color: inherit;
-    text-decoration: none;
-}
-.clearfix::after{
-    content: '';
-    display: block;
-    clear: both;
-}
-.topNavBar .logo{
-    font-size: 24px;
-    font-family:'Arial Black';
-   padding-top:7px;
-}
-.topNavBar .logo .rs{
-    color: #FC5D5A;
-    
-}
-.topNavBar .logo .card{
-    color:#9A9B9A;
-    margin-left: 4px;
-}
-.topNavBar{
-padding: 20px 0px;
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-}
-.topNavBar-inner{
-    padding:0 16px;
-}
-.topNavBar nav{
-    padding-top : 7px;
-}
-.topNavBar nav ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.topNavBar nav ul li {
-    float: left;
-    margin: 0 17px;
-}
-.topNavBar nav ul li a{
-    font-size:13px;
-    color: #b7b7b7;
-    font-weight: bold;
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
-    padding: 5px 0;
-    display: block;
-}
-.topNavBar nav ul li a:hover{
-    border-bottom: 3px solid #e06567;
-}
-.banner{
-    background-image: url(./img/rs-cover.jpg);
-    height:515px;
-    background-size: cover;
-    background-position:center, center;
-}
-.banner .mask{
-    height: 515px;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-.userCard{
-    max-width: 940px;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: #fff;
-    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);    
+*{margin: 0; padding: 0; }
+h1,h2,h3,h4,h5,h6{font-weight: normal; }
+ul,ol{list-style: none; }
+body{background-color:#efefef; margin: 0; }
+a{color: inherit; text-decoration: none; }
 
-}
-.userCard .welcome{
-    background: #e6686a;
-    display: inline-block;
-    padding: 4px 16px;
-    line-height: 22px;
-    margin-bottom: 10px;
-    position:  relative;
-}
-.userCard .welcome .triangle{
-   
-    border: 10px solid transparent;
-    border-top-width: 0px;
-    width: 0px;
-    border-left-color: #e6686a;
-    position:absolute ;
-    display: block;
-    top: 100%;
-    left: 4px;
-}
-.userCard .picture{
-    float: left;
-    
-}
-.userCard .text{
-    float: left;
-    width: 470px;
-    margin-left: 65px;
-}
-.userCard .text h1{
-    margin-top: 18px;
-}
-.userCard .text hr{
-    margin: 20px 0;
-}
-.userCard .pictureAndText{
-    padding: 50px;
-}
-.userCard dl dt, .userCard dl dd{
-    float: left;
-    padding: 5px 0;
-} 
-.userCard dl dt{
-    width: 30%;
-    font-weight: bold;
-  }
-.userCard dl dd{
-    width: 70%;
-    color: #9da0a7;
-  }
-footer.media{
-    background: #E6686A;
-    text-align: center;
-}
-.userCard .media a{
-    margin:20px ;
-    line-height: 30px;
-    display: inline-block;
-    border-radius: 50%;
-    width: 40px;
-    padding: 5px 0;
-}
-.userCard .media a:hover{
-    background: #CF5D5F;
-}
-svg{
-    width: 30px;
-    height: 30px;
-    fill: white;
-    vertical-align: top;
-}
-main{
-    margin-top:-350px;
-}
-main .downResume{
-    text-align: center;
-    
-}
-main .downResume>a{
-    font-size: 14px;
-    line-height: 16px;
-    border: 1px solid #cdcfd1;
-    padding: 21px 55px;
-    border-radius: 2px;
-    font-weight: bold;
-    display: inline-block;
-    margin: 32px 0;
-    transition: box-shadow 0.2s;
-}
-main .downResume a:hover{
-    box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.2);    
-    
-}
-main .selfIntroduction{
-    font-family: "楷体";
-    max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    line-height: 1.8;
-    font-size: 18px;
-}
+.clearfix::after{content: ''; display: block; clear: both; }
+.topNavBar .logo{font-size: 24px; font-family:'Arial Black'; padding-top:7px; }
+.topNavBar .logo .rs{color: #FC5D5A;}
+.topNavBar .logo .card{color: #9A9B9A; margin-left: 4px; }
+.topNavBar{padding: 20px 0px; position: fixed; top: 0; left: 0; width: 100%; color: #b7b7b7;transition: all 1s; }
+.topNavBar.sticky{background: white;padding: 10px 0;z-index: 1;box-shadow: 0 0 10px rgba(0,0,0,0.25);color:#3d4451;}
+.topNavBar-inner{padding:0 16px; }
+.topNavBar nav{padding-top : 5px; }
+.topNavBar nav ul{list-style: none; margin: 0; padding: 0; }
+.topNavBar nav ul li {float: left; margin: 0 17px; }
+.topNavBar nav ul li a{font-size:13px;  font-weight: bold; border-top: 3px solid transparent; border-bottom: 3px solid transparent; padding: 5px 0; display: block;position: relative;}
+.topNavBar nav ul li a:hover::after{content: '';display: block;top:100%;width:100%;height:3px;left: 0;background: #e06567;position: absolute;animation: menuSlide .3s;}
+ @keyframes menuSlide{0%{width: 0; } 100%{width: 100%; } }
+
+.banner{background-image: url(./img/rs-cover.jpg); height:515px; background-size: cover; background-position:center, center;}
+.banner .mask{height: 515px; background-color: rgba(0, 0, 0, 0.8); }
+
+.userCard{max-width: 940px; margin-right: auto; margin-left: auto; background-color: #fff; box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);}
+.userCard .welcome{background: #e6686a; display: inline-block; padding: 4px 16px; line-height: 22px; margin-bottom: 10px; position:  relative; }
+.userCard .welcome .triangle{border: 10px solid transparent; border-top-width: 0px; width: 0px; border-left-color: #e6686a; position:absolute ; display: block; top: 100%; left: 4px; }
+.userCard .picture{float: left; }
+.userCard .text{float: left; width: 470px; margin-left: 65px; }
+.userCard .text h1{margin-top: 18px; }
+.userCard .text hr{margin: 20px 0; }
+.userCard .pictureAndText{padding: 50px; }
+.userCard dl dt, .userCard dl dd{float: left; padding: 5px 0; }
+.userCard dl dt{width: 30%; font-weight: bold; }
+.userCard dl dd{width: 70%; color: #9da0a7; }
+.userCard .media{background: #E6686A; text-align: center; }
+.userCard .media a{margin:20px ; line-height: 30px; display: inline-block; border-radius: 50%; width: 40px; padding: 5px 0; }
+.userCard .media a:hover{background: #CF5D5F; }
+
+svg {width: 30px; height: 30px; fill: white; vertical-align: top; }
+main {margin-top:-350px;}
+main .downResume{text-align: center;}
+main .downResume>a{font-size: 14px; line-height: 16px; border: 1px solid #cdcfd1; padding: 21px 55px; border-radius: 2px; font-weight: bold; display: inline-block; margin: 32px 0; transition: box-shadow 0.2s;}
+main .downResume a:hover{box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.2);}
+main .selfIntroduction{font-family: "楷体"; max-width: 940px; margin-left: auto; margin-right: auto; text-align: center; line-height: 1.8; font-size: 18px; }
+
 section.skills,
-section.portfolio{
-    max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-}
+section.portfolio{max-width: 940px; margin-left: auto; margin-right: auto; margin-top: 60px;}
 section.skills h2,
-section.portfolio h2{
-    text-align: center;
-    color: #3d4451;
-    font-size: 34px;
-    line-height: 1.2;
-    margin-top: 40px;    
-}
-section.skills h3{
-    font-size: 14px;
-    line-height: 1.1;
-    padding-right: 40px;
-}
-section.skills >ol{
-    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
-    background: white;
-    margin-top: 30px;
-    padding: 42px 50px 10px;
-}
-section.skills ol li{
-    float: left;
-    width: 48%;
-    box-sizing: border-box;    
-    padding-right: 30px;
-}
-section.skills ol li .progressBar{
-    height: 5px;
-    background: #FAE1E1;
-    margin: 4px 0 40px ;
-    
-    
-}
-section.skills ol li .progress{
-    height: 100%;
-    background: #E6686A;
-    border-radius: 3px;
-}
-section.skills ol li:nth-child(even){
-    float: right;
-}
-section.portfolio{
-    text-align: center;
-    margin-bottom: 100px;
-}
+section.portfolio h2{text-align: center; color: #3d4451; font-size: 34px; line-height: 1.2; margin-top: 40px;}
+section.skills h3{font-size: 14px; line-height: 1.1; padding-right: 40px;}
+section.skills >ol{box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5); background: white; margin-top: 30px; padding: 42px 50px 10px;}
+section.skills ol li{float: left; width: 48%; box-sizing: border-box; padding-right: 30px;}
+section.skills ol li .progressBar{height: 5px; background: #FAE1E1; margin: 4px 0 40px ;}
+section.skills ol li .progress{height: 100%; background: #E6686A; border-radius: 3px;}
+section.skills ol li:nth-child(even){float: right;}
 
-section.portfolio>nav{
-    margin-top: 32px;
-    display: inline-block;
-    vertical-align: top;
-}
-section.portfolio>nav>ol{
-    margin: 0 auto;
-    display: inline-block;
-    vertical-align: top;
-    cursor: pointer;
-}
-section.portfolio>nav>ol>li{
-    float: left;
-    margin-left: 40px;
-}    
-section.portfolio>nav>ol>li:nth-child(1){
-    float: left;
-    margin-left: 0;
-} 
-section.portfolio nav>.bar{
-    height: 5px;
-    background: #FAE1E1;
-    margin-top: 5px;
-    margin-bottom: 28px;
-    border-radius: 2px;
-}
-section.portfolio nav>.bar> .bar-inner{
-    height: 100%;
-    background: #E6686A;
-    border-radius: 2px;
-    transition: all 0.3s;
-}
-section.portfolio >nav .bar.state-1 .bar-inner{
-    margin-left: 0;
-    width:50px;
-}
-section.portfolio >nav .bar.state-2 .bar-inner{
-    margin-left: 65px;
-    width:50px;
-}
-section.portfolio >nav .bar.state-3 .bar-inner{
-    margin-left: 140px;
-    width:96px;
-}
-section.portfolio .works{
-    position: relative;
-}
+section.portfolio{text-align: center; margin-bottom: 100px;}
+section.portfolio>nav{margin-top: 32px; display: inline-block; vertical-align: top;}
+section.portfolio>nav>ol{margin: 0 auto; display: inline-block; vertical-align: top; cursor: pointer;}
+section.portfolio>nav>ol>li{float: left; margin-left: 40px;}
+section.portfolio>nav>ol>li:nth-child(1){float: left; margin-left: 0;}
+section.portfolio nav>.bar{height: 5px; background: #FAE1E1; margin-top: 5px; margin-bottom: 28px; border-radius: 2px;}
+section.portfolio nav>.bar> .bar-inner{height: 100%; background: #E6686A; border-radius: 2px; transition:all 0.3s;}
+section.portfolio >nav .bar.state-1 .bar-inner{margin-left: 0; width:50px;}
+section.portfolio >nav .bar.state-2 .bar-inner{margin-left: 65px; width:50px;}
+section.portfolio >nav .bar.state-3 .bar-inner{margin-left: 140px; width:96px;}
+section.portfolio .works{position: relative;}
 section.portfolio .works>.big,
-section.portfolio .works>.small{
-    position: absolute;
-}
+section.portfolio .works>.small{position: absolute;}

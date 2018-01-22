@@ -14,9 +14,7 @@
         .loading::before, .loading::after{content:''; background:black; width:50px; height:50px; border-radius:50%; left:0; bottom:0; right:0; top:0; margin:auto; position:absolute; animation:s 1.5s linear infinite; }
         .loading::after{animation-delay:0.75s;}
         @keyframes s{0%{width:0; height:0; opacity:1; } 100%{width:100px; height:100px; opacity:0; } }
-        .site-welcome{
-            display: none;position: fixed;top:0;left:0;justify-content: center;align-items: center;width: 100%;height: 100%;background: #888;z-index: 1;
-        }
+        .site-welcome{display: none;position: fixed;top:0;left:0;justify-content: center;align-items: center;width: 100%;height: 100%;background: #888;z-index: 1;}
         .site-welcome.active{display: flex;}
 </style>
 </head>
@@ -26,16 +24,28 @@
         <div class="loading"></div>
     </div>
     <!-- 导航栏 -->
-    <div class="topNavBar">
+    <div id="topNavBar" class="topNavBar">
     <div class="topNavBar-inner clearfix">
         <a class="logo" href="#" alt="logo" style="float: left; ">
         <span class="rs">RS</span><span class="card">card</span>
         <nav style="float:right;">
             <ul class="clearfix">
-                <li><a href="#">关于</a></li>
-                <li><a href="#">技能</a></li>
-                <li><a href="#">作品</a></li>
-                <li><a href="#">博客</a></li>
+                <li><a href="#siteAbout">关于</a></li>
+                <li><a href="#siteSkills">技能</a></li>
+                <li><a href="#siteWorks">作品</a>
+                    <ul class="submenu">
+                        <li>作品1</li>
+                        <li>作品2</li>
+                        <li>作品3</li>
+                    </ul>
+                </li>
+                <li><a href="#">博客</a>
+                    <ul class="submenu">
+                        <li>博客1</li>
+                        <li>博客2</li>
+                        <li>博客3</li>
+                    </ul>
+                </li>
                 <li><a href="#">日历</a></li>
                 <li><a href="#">联系方式</a></li>
                 <li><a href="#">其他</a></li>
@@ -47,7 +57,7 @@
         <div class="mask"></div>
     </div>
     <main>
-        <div class="userCard">
+        <div id="siteAbout" class="userCard">
             <div class="pictureAndText clearfix">
                 <div class="picture">
                     <img src="./img/avatar.jpg" width="299" height="347" alt="头像">
@@ -95,7 +105,7 @@
             技能:前端开发，Node.js开发
         </p>
     </main>
-    <section class="skills">
+    <section id="siteSkills" class="skills">
         <h2>技能</h2>
         <ol class="clearfix">
             <li><h3>HTML 5 &amp; CSS 3</h3>
@@ -131,7 +141,7 @@
                 </div></li>
         </ol>
     </section>
-    <section class="portfolio">
+    <section id="siteWorks" class="portfolio">
         <h2>作品集</h2>
         <nav>
             <ol class="clearfix">
@@ -171,6 +181,14 @@
     setTimeout(function(){
         siteWelcome.classList.remove('active')
     },3000)
+    window.onscroll = function(xxx){
+        if(window.scrollY>0){
+            topNavBar.classList.add('sticky')
+        }else{
+            topNavBar.classList.remove('sticky')
+            }
+        }
+
 </script>
 
 
