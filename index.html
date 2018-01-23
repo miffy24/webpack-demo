@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>我的个人简历</title>
     <link rel="stylesheet" href="./main.css">
-    <script src="//at.alicdn.com/t/font_523352_t5o9kdnrifbqehfr.js">
     </script>
     <style type="text/css">
         .icon {width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden; }
@@ -28,7 +27,7 @@
     <div class="topNavBar-inner clearfix">
         <a class="logo" href="#" alt="logo" style="float: left; ">
         <span class="rs">RS</span><span class="card">card</span>
-        <nav style="float:right;">
+        <nav class="menu" style="float:right;">
             <ul class="clearfix">
                 <li><a href="#siteAbout">关于</a></li>
                 <li><a href="#siteSkills">技能</a></li>
@@ -188,9 +187,17 @@
             topNavBar.classList.remove('sticky')
             }
         }
-
+    let liTags = document.querySelectorAll('nav.menu>ul>li')
+    for(let i=0;i<liTags.length;i++){
+        liTags[i].onmouseenter =function(x){
+            x.currentTarget.classList.add('active')
+        }
+        liTags[i].onmouseleave = function(x){
+            x.currentTarget.classList.remove('active')
+        }
+    }
 </script>
-
+<script src="//at.alicdn.com/t/font_523352_t5o9kdnrifbqehfr.js">
 
 </body>
 </html>
