@@ -1,23 +1,19 @@
 !function(){
-  var mySwiper = new Swiper ('.swiper-container', {
-    // Optional parameters
-    
-    loop: true,
-
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
+  var view = document.querySelector('#mySlides')
+  var controller = {
+    view:null,
+    swiper:null,
+    swiperOptions: { loop: true, pagination: { el: '.swiper-pagination', }, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', }, },
+    init:function(view){
+      this.view =view
+      this.initSwiper()
     },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  })
+    initSwiper: function(){
+      this.swiper = new Swiper (
+        this.view.querySelector('.swiper-container'),
+        this.swiperOptions 
+      )
+    }
+  }
+  controller.init(view)
 }.call()
