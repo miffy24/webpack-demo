@@ -22,8 +22,6 @@
   }
 
   var view = document.querySelector('section.message')
-
-
   var controller = {
     view: null,
     model: null,
@@ -51,7 +49,7 @@
       )
     },
     bindEvents: function(){
-      this.form.addEventListener('submit', function(e){
+      this.form.addEventListener('submit', (e)=>{
         e.preventDefault()
         this.saveMessage()
       })
@@ -66,6 +64,7 @@
         let messageList = document.querySelector('#messageList')
         messageList.appendChild(li)
         myForm.querySelector('input[name=content]').value = ''
+        myForm.querySelector('input[name=name]').value = ''
         console.log(object)
       })
     }
